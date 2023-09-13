@@ -17,9 +17,10 @@
 </head>
 
 <body>
-    @include('layout.navbar')
-    @include('layout.menubar')
+
     <section>
+        @include('layout.navbar')
+        @include('layout.menubar')
         @include('components.home.banner')
         @include('components.home.congrats')
         @include('components.home.organizations')

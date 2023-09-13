@@ -7,33 +7,33 @@
                 </svg>
             </label>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-                <a class="{{request()->routeIs('home') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/">Home</a>
-            </li>
-            
-            <li>
-                <a class="{{request()->routeIs('about') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/about">About</a>
-            </li>
-            
-            <li>
-                <a class="{{request()->routeIs('member') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/member">Membership</a>
-            </li>
-            
-            <li>
-                <a class="{{request()->routeIs('black-belts') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/black-belts">Black Belts</a>
-            </li>
-            
-            <li>
-                <a class="{{request()->routeIs('events') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/events">Events</a>
-            </li>
-            
-            <li>
-                <a class="{{request()->routeIs('notice') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/notice">Notice</a>
-            </li>
-            
-            <li>
-                <a class="{{request()->routeIs('contact') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
-            </li>
+                <li>
+                    <a class="{{request()->routeIs('home') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/">Home</a>
+                </li>
+
+                <li>
+                    <a class="{{request()->routeIs('about') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/about">About</a>
+                </li>
+
+                <li>
+                    <a class="{{request()->routeIs('member') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/member">Membership</a>
+                </li>
+
+                <li>
+                    <a class="{{request()->routeIs('black-belts') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/black-belts">Black Belts</a>
+                </li>
+
+                <li>
+                    <a class="{{request()->routeIs('events') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/events">Events</a>
+                </li>
+
+                <li>
+                    <a class="{{request()->routeIs('notice') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/notice">Notice</a>
+                </li>
+
+                <li>
+                    <a class="{{request()->routeIs('contact') ? 'text-red-600 font-semibold':'hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
+                </li>
             </ul>
         </div>
         <a href="/" class="flex items-center normal-case text-2xl">
