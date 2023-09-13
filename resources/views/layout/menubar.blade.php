@@ -1,6 +1,6 @@
-<div class="navbar hidden lg:flex bg-black text-white">
+<div class="navbar  md:hidden lg:flex bg-black text-white">
     <!-- <div class="navbar-start"></div> -->
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center  md:hidden  lg:block  xl:block xl:flex lg:flex">
         <ul class="menu menu-horizontal  items-center text-xl px-1 text-center"> <!-- Added the "text-center" class here -->
 
             <a class="{{ request()->routeIs('home') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/">Home</a>
@@ -11,7 +11,7 @@
 
             <!-- <li> | </li> -->
 
-            <a class="{{ request()->routeIs('members') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/member">Membership</a>
+            <a class="{{ request()->routeIs('membership') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/membership">Membership</a>
 
             <!-- <li> | </li> -->
 
@@ -19,7 +19,7 @@
 
             <!-- <li> | </li> -->
 
-            <a class="{{ request()->routeIs('event') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/events">Events</a>
+            <a class="{{ request()->routeIs('events') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/events">Events</a>
 
             <!-- <li> | </li> -->
 

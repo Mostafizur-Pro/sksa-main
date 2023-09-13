@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black-bets - SKSA</title>
+    <title>Notice - SKSA</title>
 
     <!-- Tailwind CSS & Daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
@@ -18,7 +18,7 @@
     @include('layout.menubar')
     <section>
         <!-- Banner Section -->
-        @section('allPageBanner', 'Black Belts')
+        @section('allPageBanner', 'Notice')
         @include('components/banner/allPageBanner')
 
         
