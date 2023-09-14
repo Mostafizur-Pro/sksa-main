@@ -45,33 +45,50 @@
 
 
         <!-- <h1>{{$leader['name']}}</h1> -->
-
-        <div class="hero  m-10">
-            <div class="grid grid-cols-5 mx-auto gap-10">
-            <div class="col-span-1"></div>
-                <div class="col-span-1">
-                    <img src="{{url($leader['image'])}}" class=" w-full" />
-                    <h2 class="text-2xl font-bold">
-                        {{ $leader['name'] }}
-                    </h2>
-                    <p>{{ $leader['designation'] }}</p>
+        <div class="hero m-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3">
+                        <img src="{{ url($leader['image']) }}" class="w-100" alt="{{ $leader['name'] }}" />
+                        <h2 class="text-2xl font-bold mt-3">
+                            {{ $leader['name'] }}
+                        </h2>
+                        <p>{{ $leader['designation'] }}</p>
+                    </div>
+                    <div class="col-md-8 col-lg-9 mt-10">
+                        <h2 class="text-2xl text-red-600 mb-3 font-bold">
+                            BIOGRAPHY:
+                        </h2>
+                        @foreach($leader['description'] as $item)
+                        <p class="mb-3">{{ $item['data'] }}</p>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="col-span-2">
-                    <h2 class="text-2xl text-red-600 mb-10 font-bold">
-                        BIOGRAPHY:
-                    </h2>
-                    @foreach($leader['description'] as $item)
-                    <h1 class="mr-10 text-justify">{{ $item['data'] }}</h1> <br />
-                    @endforeach
-
-                </div>
-                <div class="col-span-1"></div>
             </div>
         </div>
 
+        
 
-       
     </div>
+
+
+
+    <div class="drawer m-10">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <!-- Page content here -->
+                <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer" class="drawer-overlay"></label>
+                <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                    <!-- Sidebar content here -->
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+
+                </ul>
+            </div>
+        </div>
 
 </body>
 
