@@ -26,7 +26,9 @@
 
         <h1 class="text-center my-20 text-3xl font-bold">Loading <span class=" loading loading-infinity text-red-400 loading-lg"></span> </h1>
     </section>
-    @include('layout.footer')
+   <div>
+   @include('layout.footer')
+   </div>
 
 </body>
 
