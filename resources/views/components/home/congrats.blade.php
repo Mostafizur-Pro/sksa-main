@@ -8,7 +8,7 @@
             <p class="">President, SKSA BANGLADESH</p>
 
         </div>
-        <img class="w-2/6 lg:w-1/6" src="{{url('assets/about/profile.jpg')}}" />
+        <img class="w-4/6 sm:w-2/6 md:w-2/6 lg:w-1/6" src="{{url('assets/about/profile.jpg')}}" />
     </div>
 </div>
 

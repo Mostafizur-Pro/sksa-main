@@ -20,6 +20,7 @@
         <!-- Banner Section -->
         @section('allPageBanner', 'Membership')
         @include('components/banner/allPageBanner')
+        @include('components/membership/our-leader')
 
         
         <h1 class="text-center my-20 text-3xl font-bold">Loading <span class=" loading loading-infinity text-red-400 loading-lg"></span> </h1>

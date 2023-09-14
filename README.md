@@ -3,6 +3,8 @@ https://kodesolution.com/html/2018/martialarts-html/demo/index-mp-layout1.html
 https://preview.themeforest.net/item/samurai-karate-school-and-fitness-center/full_screen_preview/19235121?_ga=2.106127169.335592825.1694232260-1782934825.1693913363 
 -->
 
+<!-- Flag -->
+<!-- https://github.com/hampusborgos/country-flags/blob/main/svg/tr.svg?short_path=3f67618 -->
 
 
 

@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name":"H.M.N.C RANA",
+        "designation":"President",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+        "image":"assets/membership/ourLeader/Rana.jpg"
+    },
+    {
+        "id": 1,
+        "name":"DAVID HARI",
+        "designation":"PRESIDENT & FOUNDER",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+        "image":"assets/membership/ourLeader/Hari.jpg"
+    },
+    {
+        "id": 3,
+        "name":"Kyoshi Dady Kassim Abeid",
+        "designation":"EXECUTIVE CHAIRMAN",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+        "image":"assets/membership/ourLeader/Abeid.jpg"
+    },
+
+    {
+        "id": 4,
+        "name":"Ahmed Sahib Kadhim",
+        "designation":"DIRECTOR",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+        "image":"assets/membership/ourLeader/Sahib.jpg"
+    },
+    {
+        "id": 5,
+        "name":"Shihan Gaetano Pisano",
+        "designation":"TECHNICAL DIRECTOR",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+      "image":"assets/membership/ourLeader/Gaetano.jpg"
+    },
+    {
+        "id": 6,
+        "name":"Shihan Makela Nzolameo Scarpa",
+        "designation":"VICE PRESIDENT",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+      "image":"assets/membership/ourLeader/Makela.jpg"
+    },
+    {
+        "id": 7,
+        "name":"DR. SOKE A. KARASAKAL",
+        "designation":"VICE PRESIDENT",
+        "description":"",
+        "facebook":"",
+        "twitter":"",
+      "image":"assets/membership/ourLeader/SOKE.jpg"
+    }
+   
+]

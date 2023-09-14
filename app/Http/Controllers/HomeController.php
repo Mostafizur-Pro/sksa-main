@@ -14,7 +14,11 @@ class HomeController extends Controller
         return view('about');
     }
     public function membership(){
-        return view('membership');
+        // return view('membership');
+        $leadersJson = file_get_contents(storage_path('leader.json'));
+        $leaders = json_decode($leadersJson, true);
+
+        return view('membership', ['leaders' => $leaders]);
     }
     public function blackBelts(){
         return view('black-belts');
