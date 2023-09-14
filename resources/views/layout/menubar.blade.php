@@ -1,6 +1,6 @@
-<div class="navbar  md:hidden lg:flex bg-black text-white">
+<div class="navbar hidden sm:hidden  md:hidden lg:flex bg-black text-white">
     <!-- <div class="navbar-start"></div> -->
-    <div class="navbar-center  md:hidden  lg:block  xl:block xl:flex lg:flex">
+    <div class="navbar-center hidden sm:hidden  md:hidden  lg:block  xl:block xl:flex lg:flex">
         <ul class="menu menu-horizontal  items-center text-xl px-1 text-center"> <!-- Added the "text-center" class here -->
 
             <a class="{{ request()->routeIs('home') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/">Home</a>

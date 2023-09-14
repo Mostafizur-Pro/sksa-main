@@ -42,7 +42,7 @@
             <h1 class="text-red-600 font-extrabold text-4xl">SKSA </h1>
         </a>
     </div>
-    <div class="navbar-center md:hidden lg:block xl:block xl:flex lg:flex gap-10">
+    <div class="navbar-center hidden sm:hidden  md:hidden lg:block xl:block xl:flex lg:flex gap-10">
         <div class="flex items-center gap-3">
             <div class=" text-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -82,7 +82,7 @@
         </div>
 
     </div>
-    <div class="navbar-end ">
+    <div class="navbar-end hidden lg:block xl:block ">
         <a class="btn rounded-none bg-red-600 hover:bg-red-700 font-bold text-white">START TODAY!</a>
     </div>
 </div>
