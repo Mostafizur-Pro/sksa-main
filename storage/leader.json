@@ -3,16 +3,39 @@
         "id": 1,
         "name":"H.M.N.C RANA",
         "designation":"President",
-        "description":"",
+        "description": [
+            {
+                "data":"H. M. Nuruddin Chowdhury Rana, 7th Dan in Shotokan Karate, is a highly accomplished martial artist with over three decades of experience in the sport. Rana began his karate journey in 1990 and achieved Shodan (1st Dan) in 1993 under the guidance of Shihan Humayun Kabir Jewel, a renowned Shotokan Karate master and the first WKF referee in Bangladesh."
+            },
+            {
+                "data":"Rana has held various positions of leadership and recognition in the karate community, including National Karate Kyu Examiner, Karate Judge, Referee, Coach, and Chief Guest in international karate championships. He has received numerous awards and accolades, including the World Sports Star Award (2022) and the World Karate Masters Excellence Award (2022). Rana also holds leadership positions in various international martial arts organizations, such as the International Traditional Karate Federation (ITKF) and the World Kobudo Martial Arts Federation (WKMAF)."
+            },
+            {
+                "data":"In addition to his Shotokan Karate expertise, Rana also practices traditional karate under Kyoshi Justo Gomez, a 7-time world karate champion and founder of the International Traditional Karate School. He was appointed as the South Asian Technical Director of ITKS in 2018. In 2020, he was elected as General Secretary of the Shotokan Karate-Do Sports Association International (SKSAI) for his contributions to the development and growth of the organization globally."
+            }
+        ],
         "facebook":"",
         "twitter":"",
         "image":"assets/membership/ourLeader/Rana.jpg"
     },
     {
-        "id": 1,
+        "id": 2,
         "name":"DAVID HARI",
         "designation":"PRESIDENT & FOUNDER",
-        "description":"",
+        "description": [
+            {
+                "data":"Master David Hari is the founder president of sksa International. He has stable sksa International years of 2015, Special effort by kyoshi HMNC Rana, and under the control of Kyoshi Dady Kassim. Master David Hari started his martial arts careers with kickboxing in the years of 1995. After 10 years of attending the kickboxing, he joined the shotokan karate and continued his martial arts careers with shotokan style. Master David Hari has attended many national and international karate championships and many more karate seminars like 🇸🇬 Singapore 🇲🇾 Malaysia 🇮🇩 Indonesia 🇳🇵 Nepal 🇮🇳 India and 🇦🇪 Dubai (UAE) United Arab Emirates."
+            },
+            {
+                "data":"Master David Hari is a very passionate leader and highly skilled martial arts instructor. Also talented organiser who has organised many open national and international karate championships and many more free self-defense camps for all ages groups for children and adults girls and boys, man and women."
+            },
+            {
+                "data":"Master David Hari is the kindness for the newly karate players who can't afford to join karate classes and karate championships. He provides everything free for them. Because master David Hari belongs to a medium family, he knows that poverty. He thought that every player should get a chance to achieve their goals and dreams."
+            },
+            {
+                "data":"Master David Hari is the certified karate instructor, swimming coach, and lifeguard by the government of Dubai (UAE) United Arab Emirates."
+            }
+        ],
         "facebook":"",
         "twitter":"",
         "image":"assets/membership/ourLeader/Hari.jpg"
@@ -21,7 +44,20 @@
         "id": 3,
         "name":"Kyoshi Dady Kassim Abeid",
         "designation":"EXECUTIVE CHAIRMAN",
-        "description":"",
+        "description": [
+            {
+                "data":"Kyoshi Dady Kassim is a martial arts master with a wealth of experience and knowledge. With 35 years in the field, he has dedicated his life to the study and practice of martial arts. He began his journey in 1987 with Shotokan karate and has since attained the rank of 7th Dan Black Belt and Shihan title. He has also trained in boxing and kickboxing, making him a well-rounded martial artist."
+            },
+            {
+                "data":"Kyoshi Dady is the founder of the Tanzania Martial Arts Association and his dedication to the discipline earned him a Master of Arts certificate in 2014. He has also trained under the renowned Hanshi Shalom Avitan from Israel, a 10th Dan, in self-defense techniques and imparted his knowledge to security companies in Zanzibar and Arusha. In 2019, he received his Kapap/krav maga instructor certificate under FIMA East Africa Kapap Representative Master Jean Bruneau Laurette."
+            },
+            {
+                "data":"Kyoshi Dady has a passion for teaching and has been sharing his knowledge with police officers, security personnel, and the Tanzanian reserve force army, as well as civilians for over a decade. He opened his first dojo in 1996 and now runs nineteen martial arts schools throughout Tanzania, with 24 trainers, 40 black belts, and over 500 students. The impact of his teachings can be seen in the success of his students and the growth of the martial arts community in Tanzania. He is also the Executive Chairman of SKSAI, an organization with 27 country members worldwide, which showcases the reach and influence of his teachings."
+            },
+            {
+                "data":"Kyoshi Dady's passion, dedication and expertise make him a true martial arts master. He continues to inspire and empower people through his teachings and has made a significant impact on the martial arts community in Tanzania and beyond."
+            }
+        ],
         "facebook":"",
         "twitter":"",
         "image":"assets/membership/ourLeader/Abeid.jpg"
@@ -31,7 +67,20 @@
         "id": 4,
         "name":"Ahmed Sahib Kadhim",
         "designation":"DIRECTOR",
-        "description":"",
+        "description": [
+            {
+                "data":"H.R.H Prof. Dr. Isgm. Hanshi. Ahmed Sahib Kadhim is a highly accomplished and respected individual with a distinguished background in both the military and martial arts worlds. As a retired Army General, he brings a unique perspective and leadership skills to his role as the founder and President of the International Academy of Traditional Martial Arts."
+            },
+            {
+                "data":"With a deep understanding and mastery of Ju Jitsu, he holds an 8th Dan in the discipline, and his expertise extends to the realm of Traditional Martial Arts, where he holds a 10th Dan, making him one of the highest-ranked practitioners in the field. He also holds the esteemed title of Prince of Ohanaeze Kingdom, further solidifying his status as a martial arts master."
+            },
+            {
+                "data":"H.R.H Prof. Dr. Isgm. Hanshi. Ahmed Sahib Kadhim's leadership and knowledge are not limited to the martial arts community; he also holds important roles in the international arena. He serves as the Deputy Secretary General for the World Un-Ongo, and as the President of Un-Ongo Iraq, where he is committed to promoting peace, stability, and understanding among nations."
+            },
+            {
+                "data":"His military background, combined with his extensive martial arts knowledge and leadership roles, make him a unique and respected figure in the field. His contributions have had a significant impact on the traditional martial arts community, and his dedication to promoting peace, stability, and understanding among nations showcase his exceptional leadership skills."
+            }
+        ],
         "facebook":"",
         "twitter":"",
         "image":"assets/membership/ourLeader/Sahib.jpg"
@@ -40,7 +89,20 @@
         "id": 5,
         "name":"Shihan Gaetano Pisano",
         "designation":"TECHNICAL DIRECTOR",
-        "description":"",
+        "description": [
+            {
+                "data":"Shihan Gaetano Pisano is a highly esteemed martial arts master and coach with a passion for the sport that has spanned over four decades. Born on May 15th, 1960 in Sicily, Italy, Shihan Pisano began his journey in the martial arts world in 1973 and has been an active participant in the sport ever since."
+            },
+            {
+                "data":"Shihan Pisano's expertise in both kata and kumite has earned him multiple regional titles, and his skills as an athlete have been showcased in numerous national and international championships. He has also made a significant impact as a coach, having led the regional kata team to a 2nd place finish in the Italian championship for regions in 2003 and a 5th place finish in the European championship for regions that same year."
+            },
+            {
+                "data":"Shihan Pisano's talent and experience have been recognized with a rank of 7th Dan and a teacher qualification since 2009. He is also a qualified national competition official and practices both Shotokan and Shito Ryu styles. In 2021 and 2022, he further solidified his reputation as a top-tier martial artist with 2nd place finishes in the Italian and European championships."
+            },
+            {
+                "data":"With a wealth of knowledge, experience, and a commitment to excellence, Shihan Gaetano Pisano is a highly sought-after mentor and coach in the martial arts community."
+            }
+        ],
         "facebook":"",
         "twitter":"",
       "image":"assets/membership/ourLeader/Gaetano.jpg"
@@ -49,7 +111,17 @@
         "id": 6,
         "name":"Shihan Makela Nzolameo Scarpa",
         "designation":"VICE PRESIDENT",
-        "description":"",
+        "description": [
+            {
+                "data":"Shihan Makela Nzolameo Scarpa was born on September 19, 1969, in Kinshasa, Democratic Republic of the Congo. He began his martial arts journey in 1979 at the Okinawa Club in Kinshasa and has since dedicated his life to the sport. With over four decades of experience, Shihan Makela is a highly skilled and knowledgeable practitioner, expert in nine different styles of martial arts, including karate, judo, taekwondo, jujitsu, self-defense, kung fu, boxing, French savate, ninja, and more."
+            },
+            {
+                "data":"Shihan Makela's passion and commitment to karate have earned him a 6th Dan rank and a teacher qualification, which he has held since 2009. He has participated in numerous international karate championships and seminars, working with top sensei from Japan, Belgium, and beyond. As the National President of SKSA DRC Kinshasa and Chief Instructor, Shihan Makela is dedicated to promoting the sport in his home country and helping to develop the next generation of karate practitioners."
+            },
+            {
+                "data":"In recognition of his hard work and dedication, Shihan Makela has been elected as the Vice President of SKSAI. He is eager to use this position to further promote and advance the sport of karate on a global scale, helping to create new opportunities for young people and build a more inclusive, vibrant community around the world. With his wealth of experience, passion, and commitment, Shihan Makela is poised to make a lasting impact on the world of martial arts."
+            }
+        ],
         "facebook":"",
         "twitter":"",
       "image":"assets/membership/ourLeader/Makela.jpg"
@@ -58,10 +130,18 @@
         "id": 7,
         "name":"DR. SOKE A. KARASAKAL",
         "designation":"VICE PRESIDENT",
-        "description":"",
+        "description": [
+            {
+                "data":"DR. SOKE A. KARASAKAL is a highly accomplished martial arts expert with over 50 years of experience in the sports industry. Beginning his training at the age of 6, he has dedicated his life to the study and practice of various martial arts disciplines, including boxing, taekwondo, Hapkido, aikido, karate, kenpo, and shotokan karate."
+            },
+            {
+                "data":"At 60 years of age, Dr. Karasakal remains an active member of the martial arts community, serving as the founder and president of the INTERNATIONAL DRAGON FULL CONTACT SELF DEFENSE SPORTS FEDERATION. He holds the rank of 10th Dan and is widely respected for his knowledge and expertise in the field. Through his sports club and federation, Dr. Karasakal continues to promote the benefits of martial arts, both physically and mentally. He is dedicated to helping others achieve their goals and reach their full potential through the discipline and practice of martial arts"
+            }
+  
+        ],
         "facebook":"",
         "twitter":"",
-      "image":"assets/membership/ourLeader/SOKE.jpg"
+      "image":"assets/membership/ourLeader/soke.jpg"
     }
    
 ]

@@ -4,7 +4,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center mx-auto gap-10 bg-base-200">
         <!-- Image Cards -->
         @foreach($leaders as $leader)
-        <div class="card w-96 bg-base-100 shadow-xl">
+       <a href="{{route('leader-details',['id' => $leader['id']])}}">
+       <div class="card w-72 sm:w-60 md:w-72 lg:w-72 xl:w-96 ">
             <figure>
                 <img src="{{url($leader['image'])}}" alt="{{ $leader['name'] }}" />
             </figure>
@@ -15,12 +16,13 @@
                 <p>{{ $leader['designation'] }}</p>
             </div>
         </div>
+       </a>
         @endforeach
     </div>
 </div>
 
 
-<div class="p-5 mt-5 mx-10">
+<div class="p-5 mt-5 lg:mx-10">
     <p class="text-2xl text-red-600 text-center sm:text-2xl md:text-2xl lg:text-2xl font-bold my-10">INTERNATIONAL REPRESENTATIVES</p>
     <!-- 01 -->
     <div class="collapse collapse-plus  border-x border-t border-red-500 rounded-none rounded-t-3xl">
