@@ -1,7 +1,7 @@
-<div class="grid grid-cols-2 justify-between mx-auto gap-10 ">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-between mx-auto gap-10">
     <!-- Card 1 -->
 
-    <form class="card card-compact hover:bg-white pt-20 w-4/6 mx-auto  rounded-none shadow-lg" method="POST">
+    <form class="card card-compact hover:bg-white m-10 pt-20 w-full md:w-4/6 mx-auto rounded-none shadow-lg" method="POST">
         <h2 class="text-3xl font-bold">CONTACT INFO</h2>
         <div class='grid grid-cols-2 gap-5 mt-5'>
             <div class="mb-4">
@@ -37,9 +37,9 @@
 
 
     <!-- Card 2 -->
-    <div class="card card-compact hover:bg-white  pt-20">
+    <div class="card card-compact m-10  hover:bg-white pt-20">
 
-        <div class=" text-left">
+        <div class=" text-left ">
 
             <h2 class="text-3xl font-bold">CONTACT INFO</h2>
             <div class="mt-5 font-semibold text-lg flex items-center gap-2">
@@ -59,7 +59,7 @@
                 </p>
             </div>
             <div class="mt-3 font-semibold text-lg flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                     <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" fill="red" />
                 </svg>
                 <p>Alba Tower 2/6 (6th Floor) Pallabi, Mirpur, Dhaka-1216</p>
@@ -73,3 +73,8 @@
 
 
 </div>
+
+
+
+
+
