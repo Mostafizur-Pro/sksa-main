@@ -31,7 +31,7 @@ class LeaderController extends Controller
             abort(404);
         }
 
-        return view('components.membership.leader-details', ['leader' => $leader]);
+        return view('components.membership.leader-details', ['leader' => $leader, "leaders" => $leaders]);
     }
 
 

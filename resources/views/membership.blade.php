@@ -20,6 +20,7 @@
         <!-- Banner Section -->
         @section('allPageBanner', 'Membership')
         @include('components/banner/allPageBanner')
+        
         @include('components/membership/our-leader')
 
         
