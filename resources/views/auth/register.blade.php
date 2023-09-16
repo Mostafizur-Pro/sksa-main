@@ -14,42 +14,7 @@
 
 <body>
     <!-- Navber -->
-    <div class="dropdown  absolute">
-        <label tabindex="0" class="btn btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-                <a class="{{request()->routeIs('home') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/">Home</a>
-            </li>
-
-            <li>
-                <a class="{{request()->routeIs('about') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/about">About</a>
-            </li>
-
-            <li>
-                <a class="{{request()->routeIs('membership') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/membership">Membership</a>
-            </li>
-
-            <li>
-                <a class="{{request()->routeIs('black-belts') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/black-belts">Black Belts</a>
-            </li>
-
-            <li>
-                <a class="{{request()->routeIs('events') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/events">Events</a>
-            </li>
-
-            <li>
-                <a class="{{request()->routeIs('notice') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/notice">Notice</a>
-            </li>
-
-            <li>
-                <a class="{{request()->routeIs('contact') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
-            </li>
-        </ul>
-    </div>
+    @include('layout.menuItem')
     <!-- Register Page -->
 
     <div class="hero min-h-screen bg-base-200">
@@ -67,24 +32,18 @@
 
                     <!-- <input type="text" name="name" placeholder="First name" class="input input-bordered" /> -->
 
-                    <input type="text" name="name" placeholder="Your name" class="input input-bordered focus:border-red-500 rounded-none" required/>
-
-
-
-
-
-
-
-
-
+                    <input type="text" name="name" placeholder="Your name" class="input input-bordered focus:border-red-500 rounded-none" required />
 
                     <!-- <span class="text-red-400 ">@error('name') {{$message}} @endError</span> -->
 
-                    <input type="email" name="email" placeholder="Your E-mail" class="input input-bordered focus:border-red-500 rounded-none" required/>
+                    <input type="email" name="email" placeholder="Your E-mail" class="input input-bordered focus:border-red-500 rounded-none" required />
                     <!-- <span class="text-red-400 ">@error('email') {{$message}} @endError</span> -->
-                    <input type="password" name="password" placeholder="Your password" class="input input-bordered focus:border-red-500 rounded-none" required />
+                    <input type="password" name="password" id="passwordInput" placeholder="Your password" class="input input-bordered focus:border-red-500 rounded-none" required />
                     <!-- <span class="text-red-400 ">@error('password') {{$message}} @endError</span> -->
-
+                    <label for="showPassword" class="text-sm text-neutral-500">
+                        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()" />
+                        Show Password
+                    </label>
                     <div class="form-control mt-6">
                         <button class="btn rounded-none bg-red-600 hover:bg-red-700 text-white">Sighup</button>
                     </div>
@@ -93,6 +52,23 @@
             </form>
         </div>
     </div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("passwordInput");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+
+
+
+
+
+
+
 </body>
 
 </html>

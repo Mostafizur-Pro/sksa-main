@@ -48,6 +48,9 @@
             <li>
                 <a class="{{request()->routeIs('contact') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
             </li>
+            <li>
+                <a class="{{request()->routeIs('register') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/register">Register</a>
+            </li>
         </ul>
     </div>
     <!-- Register Page -->
@@ -70,7 +73,7 @@
                     <!-- <span class="text-red-400 ">@error('password') {{$message}} @endError</span> -->
 
                     <label class="label">
-                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        <a href="{{url('/forget-password')}}" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
 
                     <div class="form-control mt-6">

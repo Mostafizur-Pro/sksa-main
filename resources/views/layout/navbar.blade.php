@@ -34,6 +34,9 @@
                 <li>
                     <a class="{{request()->routeIs('contact') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
                 </li>
+                <li>
+                <a class="{{request()->routeIs('login') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/login">Login</a>
+            </li>
             </ul>
         </div>
         <a href="/" class="flex items-center normal-case text-2xl">
