@@ -23,3 +23,9 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/leader-details/{id}', [LeaderController::class, 'leaderDetails'])->name('leader-details');
 
 
+Route::get('/login', function () {
+    return view('auth/login');
+});
+Route::get('/register', function () {
+    return view('auth/register');
+});

@@ -6,23 +6,23 @@
         <div class='grid grid-cols-2 gap-5 mt-5'>
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-semibold ">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required class="w-full px-3 py-2 border  focus:outline-none focus:border-red-500 rounded-none">
+                <input type="text" id="name" name="name" placeholder="Your name" required class="w-full px-3 py-2 border  focus:outline-none focus:border-red-500 rounded-none">
             </div>
             <div class="mb-4">
                 <label for="phone" class="block text-gray-700 font-semibold ">Your Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="Phone number" class="w-full px-3 py-2 border  focus:outline-none focus:border-red-500 rounded-none">
+                <input type="tel" id="phone" name="phone" placeholder="Your Number" class="w-full px-3 py-2 border  focus:outline-none focus:border-red-500 rounded-none">
             </div>
         </div>
         <div>
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-semibold ">Your Email *</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required class="w-full px-3 py-2 border  focus:outline-none focus:border-red-500 rounded-none">
+                <input type="email" id="email" name="email" placeholder="Your E-mail" required class="w-full px-3 py-2 border  focus:outline-none focus:border-red-500 rounded-none">
             </div>
 
             <div class="mb-4">
                 <label for="patient_info" class="block text-gray-700 font-semibold ">Tell us
                 </label>
-                <textarea id="patient_info" name="patient_info" placeholder="Tell us" rows="4" class="w-full px-3 py-2 border focus:outline-none focus:border-red-500 rounded-none"></textarea>
+                <textarea id="patient_info" name="patient_info" placeholder="Your Message" rows="4" class="w-full px-3 py-2 border focus:outline-none focus:border-red-500 rounded-none"></textarea>
             </div>
 
         </div>
