@@ -25,13 +25,14 @@ Route::get('/leader-details/{id}', [LeaderController::class, 'leaderDetails'])->
 
 
 
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->name('login')->Middleware('alreadyLoggedIn');;
 Route::post('/login-user', [UserController::class, 'loginUser'])->name('login-user');
 
 
-Route::get('/register', [UserController::class, 'register'])->name('register');
+Route::get('/register', [UserController::class, 'register'])->name('register')->Middleware('alreadyLoggedIn');;
 Route::post('/register-user', [UserController::class, 'registerUser'])->name('register-user');
 
+Route::get('/logout', [UserController::class, "logout"]);
 
 Route::get('/forget-password', [UserController::class, 'forgetPassword'])->name('forget-password');
 

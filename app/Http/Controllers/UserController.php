@@ -88,4 +88,20 @@ class UserController extends Controller
 
         return view('dashboard/app', compact('data', 'allData'));
     }
+
+    
+    public function logout(){
+        if (Session::has('loginId')) {
+            Session::pull('loginId');
+            return redirect('/login');
+        }
+    }
+
+
+
+
+
+
+
+
 }

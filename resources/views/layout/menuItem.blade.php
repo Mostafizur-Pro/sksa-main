@@ -35,5 +35,6 @@
         <li>
             <a class="{{request()->routeIs('login') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/login">Login</a>
         </li>
+       
     </ul>
 </div>
