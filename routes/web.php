@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LeaderController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,12 +24,22 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/leader-details/{id}', [LeaderController::class, 'leaderDetails'])->name('leader-details');
 
 
-Route::get('/login', function () {
-    return view('auth/login');
-});
-Route::get('/register', function () {
-    return view('auth/register');
-});
-Route::get('/forget-password', function () {
-    return view('auth/forget-password');
-});
+
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::post('/login-user', [UserController::class, 'loginUser'])->name('login-user');
+
+
+Route::get('/register', [UserController::class, 'register'])->name('register');
+Route::post('/register-user', [UserController::class, 'registerUser'])->name('register-user');
+
+
+Route::get('/forget-password', [UserController::class, 'forgetPassword'])->name('forget-password');
+
+
+
+Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('isLoggedIn');
+// Dashboard 
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard/app');
+// });

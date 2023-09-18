@@ -20,6 +20,8 @@
         <!-- Banner Section -->
         @section('allPageBanner', 'About Us')
         @include('components/banner/allPageBanner')
+
+        
         @include('components/about/history')
         @include('components/about/sksa')
 

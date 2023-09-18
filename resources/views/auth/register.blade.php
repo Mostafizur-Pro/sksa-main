@@ -25,21 +25,17 @@
                 <h1 class="text-2xl font-bold"></h1>
                 <img class="w-96" src="assets/auth/register.svg" alt="">
             </div>
-            <form method="post" class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <form action="{{ route('register-user') }}" method="post" class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
                 @csrf
                 <div class="card-body">
-
-                    <!-- <input type="text" name="name" placeholder="First name" class="input input-bordered" /> -->
-
                     <input type="text" name="name" placeholder="Your name" class="input input-bordered focus:border-red-500 rounded-none" required />
-
-                    <!-- <span class="text-red-400 ">@error('name') {{$message}} @endError</span> -->
+                    <span class="text-red-400 ">@error('name') {{$message}} @endError</span>
 
                     <input type="email" name="email" placeholder="Your E-mail" class="input input-bordered focus:border-red-500 rounded-none" required />
-                    <!-- <span class="text-red-400 ">@error('email') {{$message}} @endError</span> -->
+                    <span class="text-red-400 ">@error('email') {{$message}} @endError</span>
                     <input type="password" name="password" id="passwordInput" placeholder="Your password" class="input input-bordered focus:border-red-500 rounded-none" required />
-                    <!-- <span class="text-red-400 ">@error('password') {{$message}} @endError</span> -->
+                    <span class="text-red-400 ">@error('password') {{$message}} @endError</span>
                     <label for="showPassword" class="text-sm text-neutral-500">
                         <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()" />
                         Show Password

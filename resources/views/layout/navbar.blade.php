@@ -85,6 +85,8 @@
         </div>
 
     </div>
+
+
     <div class="navbar-end hidden lg:block xl:block ml-10">
         <a href="{{url('login')}}" class="btn rounded-none bg-red-600 hover:bg-red-700 font-bold text-white">START TODAY!</a>
     </div>

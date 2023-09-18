@@ -62,15 +62,15 @@
                 <h1 class="text-2xl font-bold"></h1>
                 <img class="w-96" src="assets/auth/login.svg" alt="">
             </div>
-            <form method="post" class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <form action="{{route('login-user')}}" method="post" class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
 
 
                 @csrf
                 <div class="card-body">
                     <input type="email" name="email" placeholder="Your E-mail" class="input input-bordered focus:border-red-500 rounded-none" required/>
-                    <!-- <span class="text-red-400 ">@error('email') {{$message}} @endError</span> -->
+                    <span class="text-red-400 ">@error('email') {{$message}} @endError</span>
                     <input type="password" name="password" placeholder="Your password" class="input input-bordered focus:border-red-500 rounded-none"  required/>
-                    <!-- <span class="text-red-400 ">@error('password') {{$message}} @endError</span> -->
+                    <span class="text-red-400 ">@error('password') {{$message}} @endError</span>
 
                     <label class="label">
                         <a href="{{url('/forget-password')}}" class="label-text-alt link link-hover">Forgot password?</a>
