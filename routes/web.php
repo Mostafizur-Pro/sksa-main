@@ -53,6 +53,7 @@ Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('u
 Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser');
 
 Route::delete('/deleteUser/{id}', [UserController::class, 'deleteUser' ])->name('deleteUser');
+Route::delete('/deleteMainUser/{id}', [UserController::class, 'deleteMainUser' ])->name('deleteMainUser');
 
 
 // Route::get('/allUser', function () {

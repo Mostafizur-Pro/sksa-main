@@ -160,6 +160,21 @@ class UserController extends Controller
     
         return redirect('/allUser')->with('success', 'Login successful!');
     }
+
+    public function deleteMainUser($id) {
+        // Find the user by ID
+        $user = User::find($id);
+    
+        // Check if the user exists
+        if (!$user) {
+            return back()->with('fail', 'User not found.');
+        }
+    
+        // Delete the user
+        $user->delete();
+    
+        return redirect('/register')->with('success', 'Login successful!');
+    }
     
 
 

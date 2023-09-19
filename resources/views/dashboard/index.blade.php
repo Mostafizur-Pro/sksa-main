@@ -10,9 +10,13 @@
             <a href="{{url('edit-profile')}}" class="btn bg-green-300 hover:bg-green-500 rounded">Amin</a>
             @endif
 
-            <div class="space-x-2">
+            <div class="flex space-x-2">
                 <a href="{{url('edit-profile')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
-                <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
+                <form method="POST" action="{{ route('deleteMainUser', $data->id) }}">
+                                @csrf
+                                @method('DELETE')
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+</form>
 
             </div>
         </div>
@@ -34,7 +38,7 @@
                 </div>
             </div>
             <div>
-                <img class="w-44" src="https://static.vecteezy.com/system/resources/previews/011/675/374/original/man-avatar-image-for-profile-png.png" />
+                <img class="w-44" src="{{ $data->photo }}" />
             </div>
         </div>
         <!-- Add more user profile information here -->

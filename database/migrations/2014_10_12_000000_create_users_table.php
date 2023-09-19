@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('photo')->default('https://static.vecteezy.com/system/resources/previews/011/675/374/original/man-avatar-image-for-profile-png.png');
             $table->string('role')->default('user');
             $table->string('password');
             $table->rememberToken();
