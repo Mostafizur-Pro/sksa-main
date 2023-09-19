@@ -11,7 +11,9 @@
             @endif
 
             <div class="flex space-x-2">
-                <a href="{{url('edit-profile')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+            
+                <a href="{{ url('edit-profile', $data->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+            
                 <form method="POST" action="{{ route('deleteMainUser', $data->id) }}">
                                 @csrf
                                 @method('DELETE')

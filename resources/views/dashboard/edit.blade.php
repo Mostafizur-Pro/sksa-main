@@ -14,22 +14,22 @@
         </div>
         <hr class="my-5" />
 
-        <form action="{{ route('updateProfile') }}" class="flex justify-between" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('updateProfile', $editData->id) }}" class="flex justify-between" method="POST" enctype="multipart/form-editData">
             @csrf
             @method('PUT')
 
             <div>
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">UserID:</label>
-                    <p class="text-gray-800">{{ $data->id }}</p>
+                    <p class="text-gray-800">{{ $editData->id }}</p>
                 </div>
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" value="{{ $data->name }}" class="w-full border rounded py-2 px-3 text-gray-800">
+                    <input type="text" id="name" name="name" value="{{ $editData->name }}" class="w-full border rounded py-2 px-3 text-gray-800">
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
-                    <input type="email" id="email" name="email" value="{{ $data->email }}" class="w-full border rounded py-2 px-3 text-gray-800" disabled>
+                    <input type="email" id="email" name="email" value="{{ $editData->email }}" class="w-full border rounded py-2 px-3 text-gray-800" disabled>
                 </div>
                 <div class="mt-4">
                     <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save Changes</button>
@@ -38,8 +38,8 @@
 
             <div class="mb-4">
                 <label for="profile_image" class="block text-gray-700 font-bold mb-2">Profile Image:</label>
-                @if ($data->profile_image)
-                    <img class="w-32 mb-5 mx-auto" src="{{ asset('storage/' . $data->profile_image) }}" alt="Profile Image" />
+                @if ($editData->profile_image)
+                    <img class="w-32 mb-5 mx-auto" src="{{ asset('storage/' . $editData->profile_image) }}" alt="Profile Image" />
                 @else
                     <img class="w-32 mb-5 mx-auto" src="https://static.vecteezy.com/system/resources/previews/011/675/374/original/man-avatar-image-for-profile-png.png" alt="Default Profile Image" />
                 @endif

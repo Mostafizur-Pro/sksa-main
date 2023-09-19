@@ -46,10 +46,12 @@ Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('isLo
 // });
 
 // // Display the edit profile page
-Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editProfile');
+// Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editProfile');
+Route::get('/edit-profile/{id}', [UserController::class, 'editProfile'])->name('editProfile');
 
 // // Update the user profile
-Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
+// Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
+Route::put('/update-profile/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
 Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser');
 
 Route::delete('/deleteUser/{id}', [UserController::class, 'deleteUser' ])->name('deleteUser');

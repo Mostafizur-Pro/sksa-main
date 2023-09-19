@@ -99,19 +99,25 @@ class UserController extends Controller
         }
     }
 
-    public function editProfile() {
+    public function editProfile($id) {
         $data = null; // Initialize the data variable
     
-        if (Session::has('loginId')) {
-            $userId = Session::get('loginId');
-            $data = User::find($userId); // Retrieve user data by the loginId from the session
+        // if (Session::has('loginId')) {
+        //     $userId = Session::get('loginId');
+        //     $data = User::find($userId); // Retrieve user data by the loginId from the session
+        // }
+        $user = User::find($id);
+        // dd($user);
+
+        if ($user) {
+            // Load the user data if the user with the given ID exists
+            $editData = $user;
         }
-    
-        return view('dashboard.edit', compact('data'));
+        return view('dashboard.edit', compact('editData'));
     }
 
 
-    public function updateProfile(Request $request) {
+    public function updateProfile(Request $request, $id) {
         // Validate form input here
         $this->validate($request, [
             'name' => 'required|string|max:255',
@@ -119,8 +125,8 @@ class UserController extends Controller
         ]);
     
         // Get the authenticated user using the session loginId
-        $userId = Session::get('loginId');
-        $user = User::find($userId);
+        // $userId = Session::get('loginId');
+        $user = User::find($id);
     
         if ($user) {
             // Update user's profile information (excluding email)
