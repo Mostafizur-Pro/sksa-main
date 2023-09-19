@@ -35,8 +35,8 @@
                     <a class="{{request()->routeIs('contact') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
                 </li>
                 <li>
-                <a class="{{request()->routeIs('login') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/login">Login</a>
-            </li>
+                    <a class="{{request()->routeIs('login') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/login">Login</a>
+                </li>
             </ul>
         </div>
         <a href="/" class="flex items-center normal-case text-2xl">
@@ -55,6 +55,7 @@
             <div class="text-gray-600 text-sm">
                 <p>Call Us</p>
                 <h2 class=" font-semibold">01984-422786</h2>
+
             </div>
         </div>
         <div class="flex items-center gap-3">
@@ -86,8 +87,33 @@
 
     </div>
 
+    @if ($data)
+    <div class="navbar-end hidden lg:block xl:block ml-10">
+
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/675/374/original/man-avatar-image-for-profile-png.png" />
+                </div>
+            </label>
+            <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                <li>
+                    <a href="/dashboard" class="justify-between">
+                        Profile
+                        <span class="badge">New</span>
+                    </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    @else
 
     <div class="navbar-end hidden lg:block xl:block ml-10">
         <a href="{{url('login')}}" class="btn rounded-none bg-red-600 hover:bg-red-700 font-bold text-white">START TODAY!</a>
     </div>
+    @endif
+
+
 </div>

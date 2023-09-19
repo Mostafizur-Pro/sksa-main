@@ -28,7 +28,10 @@
             <!-- <li> | </li> -->
 
             <a class="{{ request()->routeIs('contact') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/contact">Contact</a>
+            <!-- @if ($data)
+
             <a class="{{ request()->routeIs('dashboard') ? 'border-b-2 border-red-600 rounded-none pb-3 hover:text-red-600 hover:border-none' : 'mx-5 pb-3 hover:text-red-600 hover:font-semibold'}}" href="/dashboard">Dashboard</a>
+            @endif -->
      
            
      
