@@ -14,13 +14,7 @@ class UserController extends Controller
     {
         return view('auth/login');
     }
-    public function allUserProfile()
-    {
-        
-     
-        $allUser = User::all();
-        return view('dashboard/allUser',  compact( 'allUser'));
-    }
+  
     public function register()
     {
         return view('auth/register');
@@ -142,6 +136,31 @@ class UserController extends Controller
             return redirect('/dashboard.edit')->with('fail', 'User not found.');
         }
     }
+
+
+    public function allUserProfile()
+    {
+        
+     
+        $allUser = User::all();
+        return view('dashboard/allUser',  compact( 'allUser'));
+    }
+
+    public function deleteUser($id) {
+        // Find the user by ID
+        $user = User::find($id);
+    
+        // Check if the user exists
+        if (!$user) {
+            return back()->with('fail', 'User not found.');
+        }
+    
+        // Delete the user
+        $user->delete();
+    
+        return redirect('/allUser')->with('success', 'Login successful!');
+    }
+    
 
 
 

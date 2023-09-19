@@ -52,6 +52,8 @@ Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editP
 Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
 Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser');
 
+Route::delete('/deleteUser/{id}', [UserController::class, 'deleteUser' ])->name('deleteUser');
+
 
 // Route::get('/allUser', function () {
 //     return view('dashboard/allUser');
