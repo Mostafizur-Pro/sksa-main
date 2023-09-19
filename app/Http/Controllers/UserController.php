@@ -86,7 +86,7 @@ class UserController extends Controller
             $allData = User::all();
         }
 
-        return view('dashboard/app', compact('data', 'allData'));
+        return view('dashboard/index', compact('data', 'allData'));
     }
 
     
@@ -97,6 +97,43 @@ class UserController extends Controller
         }
     }
 
+    public function editProfile() {
+        $data = null; // Initialize the data variable
+    
+        if (Session::has('loginId')) {
+            $userId = Session::get('loginId');
+            $data = User::find($userId); // Retrieve user data by the loginId from the session
+        }
+    
+        return view('dashboard.edit', compact('data'));
+    }
+
+
+    public function updateProfile(Request $request) {
+        // Validate form input here
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            // Add validation rules for other fields you want to update
+        ]);
+    
+        // Get the authenticated user using the session loginId
+        $userId = Session::get('loginId');
+        $user = User::find($userId);
+    
+        if ($user) {
+            // Update user's profile information (excluding email)
+            $user->name = $request->input('name');
+            // Update other user details as needed
+            $user->save();
+    
+            return redirect('/dashboard')->with('success', 'Profile updated successfully.');
+        } else {
+            // Handle the case where no user is authenticated
+            // This could be a guest user or an unauthenticated request
+            // You can redirect or return an appropriate response here
+            return redirect('edit')->with('fail', 'User not found.');
+        }
+    }
 
 
 

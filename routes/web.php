@@ -41,6 +41,14 @@ Route::get('/forget-password', [UserController::class, 'forgetPassword'])->name(
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('isLoggedIn');
 // Dashboard 
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard/app');
-// });
+Route::get('/edit-profile', function () {
+    return view('dashboard/edit');
+});
+
+// // Display the edit profile page
+// Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editProfile');
+
+// // Update the user profile
+// Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
+
+

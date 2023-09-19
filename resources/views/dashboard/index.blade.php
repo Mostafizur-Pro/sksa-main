@@ -1,9 +1,13 @@
+@extends('dashboard.dashboardApp')
+@section('title', 'Dashboard - LifeCare')
+@section('dashboard')
+
 <div class="container mx-auto px-4 py-6">
     <div class="bg-white shadow-md rounded px-8 py-6">
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-semibold ">User Profile</h1>
             <div class="space-x-2">
-                <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+                <a href="{{url('edit-profile')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
                 <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
 
             </div>
@@ -32,3 +36,7 @@
         <!-- Add more user profile information here -->
     </div>
 </div>
+
+
+
+@endsection

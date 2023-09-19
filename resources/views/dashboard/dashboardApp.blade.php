@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="grid grid-cols-4 gap-20">
+    <div class="grid grid-cols-4 gap-5">
 
         <div class="col-span-1">
             @include('layout.aside')
@@ -25,8 +25,7 @@
 
         <div class="col-span-3">
         @include('layout.top')
-            
-        @include('dashboard/index')
+            @yield('dashboard')
         </div>
 
     </div>
