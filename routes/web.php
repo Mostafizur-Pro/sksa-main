@@ -25,11 +25,11 @@ Route::get('/leader-details/{id}', [LeaderController::class, 'leaderDetails'])->
 
 
 
-Route::get('/login', [UserController::class, 'login'])->name('login')->Middleware('alreadyLoggedIn');;
+Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/login-user', [UserController::class, 'loginUser'])->name('login-user');
 
 
-Route::get('/register', [UserController::class, 'register'])->name('register')->Middleware('alreadyLoggedIn');;
+Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/register-user', [UserController::class, 'registerUser'])->name('register-user');
 
 Route::get('/logout', [UserController::class, "logout"]);
@@ -41,14 +41,18 @@ Route::get('/forget-password', [UserController::class, 'forgetPassword'])->name(
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('isLoggedIn');
 // Dashboard 
 
-Route::get('/edit-profile', function () {
-    return view('dashboard/edit');
-});
+// Route::get('/edit-profile', function () {
+//     return view('dashboard/edit');
+// });
 
 // // Display the edit profile page
-// Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editProfile');
+Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editProfile');
 
 // // Update the user profile
-// Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
+Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
+Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser');
 
 
+// Route::get('/allUser', function () {
+//     return view('dashboard/allUser');
+// });

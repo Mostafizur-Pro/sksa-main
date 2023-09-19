@@ -6,13 +6,17 @@
     <div class="bg-white shadow-md rounded px-8 py-6">
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-semibold ">User Profile</h1>
+            @if($data->role == 'admin')
+            <a href="{{url('edit-profile')}}" class="btn bg-green-300 hover:bg-green-500 rounded">Amin</a>
+            @endif
+
             <div class="space-x-2">
                 <a href="{{url('edit-profile')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
                 <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
 
             </div>
         </div>
-        <hr class="my-5"/>
+        <hr class="my-5" />
         <div class="flex justify-between gap-10">
 
             <div>

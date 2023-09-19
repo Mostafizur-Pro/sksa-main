@@ -14,6 +14,13 @@ class UserController extends Controller
     {
         return view('auth/login');
     }
+    public function allUserProfile()
+    {
+        
+     
+        $allUser = User::all();
+        return view('dashboard/allUser',  compact( 'allUser'));
+    }
     public function register()
     {
         return view('auth/register');
@@ -30,6 +37,7 @@ class UserController extends Controller
         $this->validate($request, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users',
+            
             'password' => 'required|string|min:4',
         ]);
 
@@ -131,7 +139,7 @@ class UserController extends Controller
             // Handle the case where no user is authenticated
             // This could be a guest user or an unauthenticated request
             // You can redirect or return an appropriate response here
-            return redirect('edit')->with('fail', 'User not found.');
+            return redirect('/dashboard.edit')->with('fail', 'User not found.');
         }
     }
 
