@@ -56,6 +56,8 @@ Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser
 
 Route::delete('/deleteUser/{id}', [UserController::class, 'deleteUser' ])->name('deleteUser');
 Route::delete('/deleteMainUser/{id}', [UserController::class, 'deleteMainUser' ])->name('deleteMainUser');
+Route::post('/makeAdmin/{id}', [UserController::class, 'makeAdmin' ])->name('makeAdmin');
+Route::post('/makeUser/{id}', [UserController::class, 'makeUser' ])->name('makeUser');
 
 
 // Route::get('/allUser', function () {

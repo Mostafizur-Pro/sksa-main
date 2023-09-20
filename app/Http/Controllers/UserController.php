@@ -123,22 +123,22 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->name = $request->input('name');
-    
+
         // Check if a file was uploaded
         if ($request->hasFile('photo')) {
             // Store the uploaded file
             $imagePath = $request->file('photo')->move('images');
             $user->photo = $imagePath;
         }
-    
+
         $user->save();
-    
+
         return redirect('/dashboard')->with('success', 'Profile updated successfully.');
     }
 
     // public function updateProfile(Request $request, $id)
     // {
-       
+
     //     $user = User::find($id);
     //     $user->name = $request->input('name');
     //     $user->photo = $request->input('photo');
@@ -154,12 +154,12 @@ class UserController extends Controller
 
 
 
-    
 
 
 
 
-      
+
+
 
     //     // return redirect('/dashboard')->with('success', 'Profile updated successfully.');
     // }
@@ -231,5 +231,30 @@ class UserController extends Controller
         $user->delete();
 
         return redirect('/register')->with('success', 'Login successful!');
+    }
+
+
+
+    public function makeAdmin($id)
+    {
+        $user = User::find($id);
+
+        if ($user) {
+            $user->role = 'admin';
+            $user->save();
+        }
+
+        return redirect('/allUser')->with('success', 'User is now an admin.');
+    }
+    public function makeUser($id)
+    {
+        $user = User::find($id);
+
+        if ($user) {
+            $user->role = 'user';
+            $user->save();
+        }
+
+        return redirect('/allUser')->with('success', 'User is now an admin.');
     }
 }

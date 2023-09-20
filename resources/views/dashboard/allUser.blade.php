@@ -35,7 +35,7 @@
             <tbody>
                 <tr class="bg-base-200 @if ($data->email === $user->email) bg-green-100 @endif">
                     <th>{{$user->id}}</th>
-                    <th>  <img class="w-16 rounded-full" src="{{ $user->photo}}" alt="{{ $user->name }}"></th>
+                    <th> <img class="w-16 rounded-full" src="{{ $user->photo}}" alt="{{ $user->name }}"></th>
                     <th>{{$user->name}}</th>
                     <th>{{$user->email}}</th>
                     <th>{{$user->role}}</th>
@@ -65,18 +65,36 @@
                         <!-- <button class="btn btn-active btn-accent text-white" disabled>Active</button> -->
                         @endif
                     </th>
-                    <th> @if ($data->email == $user->email)
+                    @if ( $data->role !== 'admin' )
+                    
+                    @else
+                    <th>
+                        
 
+                        @if($user->role == 'admin')
+                        <form method="POST" action="{{ route('makeUser', $user->id) }}">
+                            @csrf
+                            @if($user->email !== $data->email)
+
+
+                            <button class="btn bg-green-500 hover:bg-green-700 text-white font-bold  rounded">Make User</button>
+                            @endif
+                        </form>
                         @else
-                        @if($data->role == 'admin')
-                        <a href="{{url('makeAdmin')}}" class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded">Make Amin</a>
-                        @endif
+
+                        <form method="POST" action="{{ route('makeAdmin', $user->id) }}">
+                            @csrf
+
+                            <button class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold  rounded">Make Amin</button>
+                        </form>
+
 
                         @endif
-
-
-
+                        
+                        
+                        
                     </th>
+                    @endif
                 </tr>
             </tbody>
             @endforeach
