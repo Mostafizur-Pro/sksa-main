@@ -20,6 +20,7 @@
                 <tr>
 
                     <th>UserID</th>
+                    <th>Image</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Role</th>
@@ -34,6 +35,7 @@
             <tbody>
                 <tr class="bg-base-200 @if ($data->email === $user->email) bg-green-100 @endif">
                     <th>{{$user->id}}</th>
+                    <th>  <img src="{{ $user->photo}}" alt="{{ $user->name }}"></th>
                     <th>{{$user->name}}</th>
                     <th>{{$user->email}}</th>
                     <th>{{$user->role}}</th>

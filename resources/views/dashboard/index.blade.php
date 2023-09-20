@@ -7,7 +7,7 @@
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-semibold ">User Profile</h1>
             @if($data->role == 'admin')
-            <a href="{{url('edit-profile')}}" class="btn bg-green-300 hover:bg-green-500 rounded">Amin</a>
+            <a href="{{url('edit-profile')}}" class="btn bg-green-300 hover:bg-green-500 rounded">Admin</a>
             @endif
 
             <div class="flex space-x-2">

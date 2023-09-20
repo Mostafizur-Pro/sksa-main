@@ -1,5 +1,5 @@
   <!-- Sidebar -->
-  <aside class="bg-gray-700 text-white h-screen pl-5 w-1/4  fixed overflow-y-auto">
+  <aside class="bg-gray-700 text-white h-screen pl-5 min-w-1/4  fixed overflow-y-auto">
     <!-- Logo -->
     <div class="flex items-center justify-center h-16">
       <!-- <img src="logo.png" alt="Dashboard Logo" class="w-10 h-10"> -->

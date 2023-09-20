@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
     {
         return view('auth/login');
     }
-  
+
     public function register()
     {
         return view('auth/register');
@@ -31,7 +32,7 @@ class UserController extends Controller
         $this->validate($request, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users',
-            
+
             'password' => 'required|string|min:4',
         ]);
 
@@ -91,17 +92,19 @@ class UserController extends Controller
         return view('dashboard/index', compact('data', 'allData'));
     }
 
-    
-    public function logout(){
+
+    public function logout()
+    {
         if (Session::has('loginId')) {
             Session::pull('loginId');
             return redirect('/login');
         }
     }
 
-    public function editProfile($id) {
+    public function editProfile($id)
+    {
         $data = null; // Initialize the data variable
-    
+
         // if (Session::has('loginId')) {
         //     $userId = Session::get('loginId');
         //     $data = User::find($userId); // Retrieve user data by the loginId from the session
@@ -116,77 +119,117 @@ class UserController extends Controller
         return view('dashboard.edit', compact('editData'));
     }
 
-
-    public function updateProfile(Request $request, $id) {
-        // Validate form input here
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            // Add validation rules for other fields you want to update
-        ]);
-    
-        // Get the authenticated user using the session loginId
-        // $userId = Session::get('loginId');
+    public function updateProfile(Request $request, $id)
+    {
         $user = User::find($id);
+        $user->name = $request->input('name');
     
-        if ($user) {
-            // Update user's profile information (excluding email)
-            $user->name = $request->input('name');
-            // Update other user details as needed
-            $user->save();
-    
-            return redirect('/dashboard')->with('success', 'Profile updated successfully.');
-        } else {
-            // Handle the case where no user is authenticated
-            // This could be a guest user or an unauthenticated request
-            // You can redirect or return an appropriate response here
-            return redirect('/dashboard.edit')->with('fail', 'User not found.');
+        // Check if a file was uploaded
+        if ($request->hasFile('photo')) {
+            // Store the uploaded file
+            $imagePath = $request->file('photo')->move('images');
+            $user->photo = $imagePath;
         }
+    
+        $user->save();
+    
+        return redirect('/dashboard')->with('success', 'Profile updated successfully.');
     }
+
+    // public function updateProfile(Request $request, $id)
+    // {
+       
+    //     $user = User::find($id);
+    //     $user->name = $request->input('name');
+    //     $user->photo = $request->input('photo');
+    //     $user->save();
+
+    //     // dd($user->photo);
+
+    //     if ($request->input('photo')) {
+    //         $imagePath = $request->file('photo')->storeAs('public/profile_images');
+    //         $user->photo = $imagePath;
+    //         return redirect('/dashboard')->with('success', 'Profile updated successfully.');
+    //     }
+
+
+
+    
+
+
+
+
+      
+
+    //     // return redirect('/dashboard')->with('success', 'Profile updated successfully.');
+    // }
+    // public function updateProfile(Request $request, $id) {
+    //     // Validate form input here
+    //     $this->validate($request, [
+    //         'name' => 'required|string|max:255',
+
+    //         // Add validation rules for other fields you want to update
+    //     ]);
+
+
+
+    //     // Get the authenticated user using the session loginId
+    //     // $userId = Session::get('loginId');
+    //     $user = User::find($id);
+
+    //     if ($user) {
+    //         // Update user's profile information (excluding email)
+    //         $user->name = $request->input('name');
+    //         // Update other user details as needed
+    //         $user->save();
+
+    //         return redirect('/dashboard')->with('success', 'Profile updated successfully.');
+    //     } else {
+    //         // Handle the case where no user is authenticated
+    //         // This could be a guest user or an unauthenticated request
+    //         // You can redirect or return an appropriate response here
+    //         return redirect('/dashboard.edit')->with('fail', 'User not found.');
+    //     }
+    // }
 
 
     public function allUserProfile()
     {
-        
-     
+
+
         $allUser = User::all();
-        return view('dashboard/allUser',  compact( 'allUser'));
+        return view('dashboard/allUser',  compact('allUser'));
     }
 
-    public function deleteUser($id) {
+    public function deleteUser($id)
+    {
         // Find the user by ID
         $user = User::find($id);
-    
+
         // Check if the user exists
         if (!$user) {
             return back()->with('fail', 'User not found.');
         }
-    
+
         // Delete the user
         $user->delete();
-    
+
         return redirect('/allUser')->with('success', 'Login successful!');
     }
 
-    public function deleteMainUser($id) {
+    public function deleteMainUser($id)
+    {
         // Find the user by ID
         $user = User::find($id);
-    
+
         // Check if the user exists
         if (!$user) {
             return back()->with('fail', 'User not found.');
         }
-    
+
         // Delete the user
         $user->delete();
-    
+
         return redirect('/register')->with('success', 'Login successful!');
     }
-    
-
-
-
-
-
-
-
 }

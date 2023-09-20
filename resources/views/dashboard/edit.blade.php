@@ -14,11 +14,12 @@
         </div>
         <hr class="my-5" />
 
-        <form action="{{ route('updateProfile', $editData->id) }}" class="flex justify-between" method="POST" enctype="multipart/form-editData">
+        <form action="{{ route('updateProfile', $editData->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
-            <div>
+          <div class="flex justify-between">
+          <div>
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">UserID:</label>
                     <p class="text-gray-800">{{ $editData->id }}</p>
@@ -31,21 +32,29 @@
                     <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
                     <input type="email" id="email" name="email" value="{{ $editData->email }}" class="w-full border rounded py-2 px-3 text-gray-800" disabled>
                 </div>
-                <div class="mt-4">
-                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save Changes</button>
-                </div>
+               
             </div>
 
             <div class="mb-4">
                 <label for="profile_image" class="block text-gray-700 font-bold mb-2">Profile Image:</label>
-                @if ($editData->profile_image)
-                    <img class="w-32 mb-5 mx-auto" src="{{ asset('storage/' . $editData->profile_image) }}" alt="Profile Image" />
+              
+                <!-- <img src="{{ asset($editData->photo) }}" alt="{{ $editData->name }}"> -->
+                @if ($editData->photo)
+                    <img class="w-32 mb-5 mx-auto" src="{{ asset($editData->photo) }}" alt="{{ $editData->name }}" />
+                    <!-- <img class="w-44" src="{{ $editData->photo }}" /> -->
+                    
                 @else
                     <img class="w-32 mb-5 mx-auto" src="https://static.vecteezy.com/system/resources/previews/011/675/374/original/man-avatar-image-for-profile-png.png" alt="Default Profile Image" />
                 @endif
-                <input type="file" id="profile_image" name="profile_image" class="w-full border rounded py-2 px-3 text-gray-800">
+                <input type="file" name="photo" id="photo">
+                <!-- <input type="file" id="photo" name="photo" class="w-full border rounded py-2 px-3 text-gray-800"> -->
                 <p class="text-gray-600 text-sm">Upload a new profile image (optional)</p>
             </div>
+          </div>
+
+            <div class="mt-4">
+                    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save Changes</button>
+                </div>
         </form>
     </div>
 </div>
