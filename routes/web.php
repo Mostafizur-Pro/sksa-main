@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LeaderController;
+use App\Http\Controllers\ProfileSearchController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,20 +40,11 @@ Route::get('/forget-password', [UserController::class, 'forgetPassword'])->name(
 
 
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('isLoggedIn');
-// Dashboard 
 
-// Route::get('/edit-profile', function () {
-//     return view('dashboard/edit');
-// });
+Route::get('/edit-profile/{id}', [UserController::class, 'editProfile'])->name('editProfile')->middleware('isLoggedIn');
 
-// // Display the edit profile page
-// Route::get('/edit-profile', [UserController::class, 'editProfile'])->name('editProfile');
-Route::get('/edit-profile/{id}', [UserController::class, 'editProfile'])->name('editProfile');
-
-// // Update the user profile
-// Route::put('/update-profile', [UserController::class, 'updateProfile'])->name('updateProfile');
 Route::put('/update-profile/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
-Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser');
+Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser')->middleware('isLoggedIn');
 
 Route::delete('/deleteUser/{id}', [UserController::class, 'deleteUser' ])->name('deleteUser');
 Route::delete('/deleteMainUser/{id}', [UserController::class, 'deleteMainUser' ])->name('deleteMainUser');
@@ -63,3 +55,9 @@ Route::post('/makeUser/{id}', [UserController::class, 'makeUser' ])->name('makeU
 // Route::get('/allUser', function () {
 //     return view('dashboard/allUser');
 // });
+
+
+
+
+// Route::get('/search', 'ProfileSearchController@search')->name('searchProfiles');
+Route::get('/search', [ProfileSearchController::class, 'search'])->name('search');

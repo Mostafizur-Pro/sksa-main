@@ -103,7 +103,7 @@
                         <span class="badge">New</span>
                     </a>
                 </li>
-                <li><a>Settings</a></li>
+                <li><a href="/edit-profile/{{$data->id}}">Settings</a></li>
                 <li><a href="logout">Logout</a></li>
             </ul>
         </div>

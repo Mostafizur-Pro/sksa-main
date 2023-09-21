@@ -107,6 +107,16 @@
     </div>
 </div>
 
+<form action="{{ route('search') }}" method="GET">
+    <div class="mb-4">
+        <label for="search" class="block text-gray-700 font-bold mb-2">Search:</label>
+        <input type="text" id="search" name="search" class="w-full border rounded py-2 px-3 text-gray-800">
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
+    </div>
+</form>
+
 
 
 @endsection
