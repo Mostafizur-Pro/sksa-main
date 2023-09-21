@@ -1,5 +1,5 @@
 @extends('dashboard.dashboardApp')
-@section('title', 'Dashboard - LifeCare')
+@section('title', 'Dashboard - SKSA')
 @section('dashboard')
 
 <div class="container mx-auto px-4 py-6">
@@ -7,17 +7,17 @@
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-semibold ">User Profile</h1>
             @if($data->role == 'admin')
-            <a href="{{url('edit-profile')}}" class="btn bg-green-300 hover:bg-green-500 rounded">Admin</a>
+            <a href="{{url('edit-profile')}}" class="btn bg-green-500 text-white hover:bg-green-700 rounded-none">Admin</a>
             @endif
 
             <div class="flex space-x-2">
             
-                <a href="{{ url('edit-profile', $data->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+                <a href="{{ url('edit-profile', $data->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-none">Edit</a>
             
                 <form method="POST" action="{{ route('deleteMainUser', $data->id) }}">
                                 @csrf
                                 @method('DELETE')
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-none">Delete</button>
 </form>
 
             </div>

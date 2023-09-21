@@ -1,7 +1,7 @@
 <!-- resources/views/edit-profile.blade.php -->
 
 @extends('dashboard.dashboardApp')
-@section('title', 'Dashboard - LifeCare')
+@section('title', 'Edit Profile - SKSA')
 @section('dashboard')
 
 <div class="container mx-auto px-4 py-6">

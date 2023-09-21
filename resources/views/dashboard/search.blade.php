@@ -1,5 +1,5 @@
 @extends('dashboard.dashboardApp')
-@section('title', 'Dashboard - LifeCare')
+@section('title', 'Dashboard - SKSA')
 @section('dashboard')
 
 <div class="container mx-auto px-4 py-6">
