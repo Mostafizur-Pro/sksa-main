@@ -6,6 +6,15 @@
     <div class="bg-white shadow-md rounded px-8 py-6">
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-semibold ">All User Profile</h1>
+            <form class="flex items-center" action="{{ route('search') }}" method="GET">
+                <div class="mb-4">
+                    <label for="search" class="block text-gray-700 font-bold mb-2">Search:</label>
+                    <input type="text" id="search" name="search" class="w-full border rounded py-2 px-3 text-gray-800">
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
+                </div>
+            </form>
             <!-- <div class="space-x-2">
                 <a href="{{url('edit-profile')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
                 <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
@@ -66,10 +75,10 @@
                         @endif
                     </th>
                     @if ( $data->role !== 'admin' )
-                    
+
                     @else
                     <th>
-                        
+
 
                         @if($user->role == 'admin')
                         <form method="POST" action="{{ route('makeUser', $user->id) }}">
@@ -90,9 +99,9 @@
 
 
                         @endif
-                        
-                        
-                        
+
+
+
                     </th>
                     @endif
                 </tr>
@@ -107,15 +116,6 @@
     </div>
 </div>
 
-<form action="{{ route('search') }}" method="GET">
-    <div class="mb-4">
-        <label for="search" class="block text-gray-700 font-bold mb-2">Search:</label>
-        <input type="text" id="search" name="search" class="w-full border rounded py-2 px-3 text-gray-800">
-    </div>
-    <div class="mt-4">
-        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
-    </div>
-</form>
 
 
 
