@@ -5,20 +5,18 @@
 <div class="container mx-auto px-4 py-6">
     <div class="bg-white shadow-md rounded px-8 py-6">
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-semibold ">User Profile</h1>
-            @if($data->role == 'admin')
-            <a href="{{url('edit-profile')}}" class="btn bg-green-500 text-white hover:bg-green-700 rounded-none">Admin</a>
-            @endif
+            <h1 class="text-2xl font-semibold ">PROFILE</h1>
+
 
             <div class="flex space-x-2">
-            
+
                 <a href="{{ url('edit-profile', $data->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-none">Edit</a>
-            
+
                 <form method="POST" action="{{ route('deleteMainUser', $data->id) }}">
-                                @csrf
-                                @method('DELETE')
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-none">Delete</button>
-</form>
+                    @csrf
+                    @method('DELETE')
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-none">Delete</button>
+                </form>
 
             </div>
         </div>
@@ -43,9 +41,36 @@
                 <img class="w-44" src="{{ $data->photo }}" />
             </div>
         </div>
+
+        <!-- toast -->
+        <div class="toast toast-top toast-center">
+            @if(session('fail'))
+            <div class="alert alert-error">
+                {{ session('fail') }}
+            </div>
+            @endif
+        </div>
+
         <!-- Add more user profile information here -->
     </div>
 </div>
+
+<script>
+    // Wait for the document to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Find the toast element
+        const toast = document.querySelector('.toast');
+
+        // Check if the toast element exists
+        if (toast) {
+            // Set a timeout to hide the toast after 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                toast.style.display = 'none';
+            }, 5000); // 5000 milliseconds (5 seconds)
+        }
+    });
+</script>
+
 
 
 

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- Navbar & Nemubar section -->
+    <!-- Navbar & Memubar section -->
     @include('layout.navbar')
     @include('layout.menubar')
     <section>

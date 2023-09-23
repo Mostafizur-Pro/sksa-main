@@ -124,6 +124,8 @@ class UserController extends Controller
         $user = User::find($id);
         $user->name = $request->input('name');
 
+        
+
         // Check if a file was uploaded
         if ($request->hasFile('photo')) {
             // Store the uploaded file

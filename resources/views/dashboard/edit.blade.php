@@ -22,15 +22,15 @@
           <div>
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">UserID:</label>
-                    <p class="text-gray-800">{{ $editData->id }}</p>
+                    <p class="text-gray-800">@if($data->role == 'admin') {{ $editData->id }} @else  {{ $data->id }} @endif</p>
                 </div>
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" value="{{ $editData->name }}" class="w-full border rounded py-2 px-3 text-gray-800">
+                    <input type="text" id="name" name="name" value="@if($data->role == 'admin') {{ $editData->name }} @else  {{ $data->name }} @endif " class="w-full border rounded py-2 px-3 text-gray-800">
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
-                    <input type="email" id="email" name="email" value="{{ $editData->email }}" class="w-full border rounded py-2 px-3 text-gray-800" disabled>
+                    <input type="email" id="email" name="email" value="@if($data->role == 'admin') {{ $editData->email }} @else  {{ $data->email }} @endif" class="w-full border rounded py-2 px-3 text-gray-800" disabled>
                 </div>
                
             </div>
@@ -40,7 +40,7 @@
               
                 <!-- <img src="{{ asset($editData->photo) }}" alt="{{ $editData->name }}"> -->
                 @if ($editData->photo)
-                    <img class="w-32 mb-5 mx-auto" src="{{ asset($editData->photo) }}" alt="{{ $editData->name }}" />
+                    <img class="w-32 mb-5 mx-auto" src="{{ asset($editData->photo) }}" alt="@if($data->role == 'admin') {{ $editData->name }} @else  {{ $data->name }} @endif" />
                     <!-- <img class="w-44" src="{{ $editData->photo }}" /> -->
                     
                 @else
