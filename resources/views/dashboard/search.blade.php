@@ -2,20 +2,13 @@
 @section('title', 'Dashboard - SKSA')
 @section('dashboard')
 
+
+
 <div class="container mx-auto px-4 py-6">
     <div class="bg-white shadow-md rounded px-8 py-6">
         <div class="flex justify-between items-center mb-4">
             <h1 class="text-2xl font-semibold ">Search Results</h1>
-            <!-- search field -->
-            <!-- <form id="searchForm">
-                <div class="mb-4">
-                    <label for="search" class="block text-gray-700 font-bold mb-2">Search:</label>
-                    <input type="text" id="search" name="search" class="w-full border rounded py-2 px-3 text-gray-800">
-                </div>
-                <div class="mt-4">
-                    <button type="button" id="searchButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
-                </div>
-            </form> -->
+          
             <form class="flex items-center" action="{{ route('search') }}" method="GET">
                 <div class="mb-4">
                     <label for="search" class="block text-gray-700 font-bold mb-2">Search:</label>
@@ -30,13 +23,12 @@
         </div>
         <hr class="my-5" />
 
-<!-- {{$searchTerm}} -->
 
         <!-- Search -->
         <div class="container mx-auto  py-6">
          
 
-
+     
             @if ($results)
             <table class="table">
 
@@ -56,6 +48,7 @@
                 </thead>
                 <!-- ... -->
                 @foreach($results as $user)
+              
                 <tbody>
                     <tr class="bg-base-200 @if ($data->email === $user->email) bg-green-100 @endif">
                         <th>{{$user->id}}</th>
@@ -141,7 +134,9 @@
        
     </div>
     <!-- All User -->
-    <h1>Back To All User Page</h1>
+    <footer class="btn mt-10 p-4 rounded-none bg-blue-500 hover:bg-blue-700">
+        <a href="/allUser" class="font-bold text-white">Back</a>
+    </footer>
 </div>
 
 
