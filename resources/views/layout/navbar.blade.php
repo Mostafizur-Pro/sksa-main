@@ -42,10 +42,14 @@
         <a href="/" class="flex items-center normal-case text-2xl">
 
             <img class='w-12' src="{{url('assets/logo/logo.png')}}" alt="image" />
-            <h1 class="text-red-600 font-extrabold text-4xl">SKSA </h1>
+            <div class="flex gap-1">
+            <h1 class="text-red-600 font-extrabold text-3xl">SKSA </h1>
+            <h1 class="text-red-600 hidden lg:block font-extrabold text-3xl"> Bangladesh </h1>
+            
+            </div>
         </a>
     </div>
-    <div class="navbar-center hidden sm:hidden  md:hidden lg:block xl:block xl:flex lg:flex gap-10">
+    <div class="navbar-center hidden sm:hidden lg:ml-20 md:hidden lg:block xl:block xl:flex lg:flex gap-10">
         <div class="flex items-center gap-3">
             <div class=" text-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">

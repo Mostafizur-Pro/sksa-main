@@ -197,11 +197,18 @@ class UserController extends Controller
 
     public function allUserProfile()
     {
-
-
-        $allUser = User::all();
+        $allUser = User::paginate(5);
         return view('dashboard/allUser',  compact('allUser'));
     }
+
+
+    // public function allUserProfile()
+    // {
+
+
+    //     $allUser = User::all();
+    //     return view('dashboard/allUser',  compact('allUser'));
+    // }
 
     public function deleteUser($id)
     {

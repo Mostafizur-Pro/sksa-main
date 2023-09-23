@@ -113,8 +113,23 @@
 
         </table>
         <!-- Add more user profile information here -->
+
     </div>
+
 </div>
+
+<style>
+.pagination-container .page-item.active .page-link {
+    color: red; /* Change this to your desired color */
+}
+
+
+</style>
+
+<div class="my-5 pagination-container">
+    {{ $allUser->links() }}
+</div>
+
 
 
 

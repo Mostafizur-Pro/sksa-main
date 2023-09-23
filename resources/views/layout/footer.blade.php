@@ -7,7 +7,7 @@
     <div class="flex justify-center mx-auto">
       <img src="{{url('assets/logo/logo.png')}}" class="w-20 md:w-24 lg:w-32 xl:w-40 rounded-lg items-center" />
     </div>
-    <h1 class="text-red-600 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Shotokan Karate-Do Sports Associatio</h1>
+    <h1 class="text-red-600 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Shotokan Karate-Do Sports Association</h1>
   </div>
 
 
