@@ -20,7 +20,8 @@
     @include('layout.navbar')
     @include('layout.menubar')
     <section>
-        @include('components.home.banner')
+        @include('components.home.slider')
+        <!-- @include('components.home.banner') -->
         @include('components.home.congrats')
         @include('components.home.organizations')
 

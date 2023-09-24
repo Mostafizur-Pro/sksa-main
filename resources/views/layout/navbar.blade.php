@@ -85,7 +85,7 @@
             </div>
             <div class="text-gray-600 text-sm">
                 <p>E-mail</p>
-                <h2 class="font-semibold"> sksabd2019@gmail.com</h2>
+                <a href="mailto:sksabd2019@gmail.com" class="font-semibold"> sksabd2019@gmail.com</a>
             </div>
         </div>
 

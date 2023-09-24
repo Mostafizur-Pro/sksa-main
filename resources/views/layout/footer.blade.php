@@ -12,7 +12,7 @@
 
 
   <nav>
-    <header class="footer-title">Company</header>
+    <header class="footer-title">MENU</header>
     <a href="/about" class="link link-hover">About us</a>
     <a href="/contact" class="link link-hover">Contact</a>
     <a href="/events" class="link link-hover">Events</a>
