@@ -42,10 +42,10 @@
         <a href="/" class="flex items-center normal-case text-2xl">
 
             <img class='w-12' src="{{url('assets/logo/logo.png')}}" alt="image" />
-            <div class="flex gap-1">
-            <h1 class="text-red-600 font-extrabold text-3xl">SKSA </h1>
-            <h1 class="text-red-600 hidden lg:block font-extrabold text-3xl"> Bangladesh </h1>
-            
+            <div class="lg:flex gap-1">
+                <h1 class="text-red-600 font-extrabold text-lg md:text-xl lg:text-3xl">SKSA </h1>
+                <h1 class="text-red-600 font-extrabold text-lg md:text-xl lg:text-3xl"> Bangladesh </h1>
+
             </div>
         </a>
     </div>
