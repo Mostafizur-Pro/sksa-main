@@ -21,9 +21,10 @@
     @include('layout.menubar')
     <section>
         @include('components.home.slider')
-        <!-- @include('components.home.banner') -->
         @include('components.home.congrats')
-        @include('components.home.organizations')
+        @include('components.home.banner')
+        @include('components.home.approved')
+        @include('components.home.member')
 
         <h1 class="text-center my-20 text-3xl font-bold">Loading <span class=" loading loading-infinity text-red-400 loading-lg"></span> </h1>
     </section>
