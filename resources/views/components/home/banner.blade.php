@@ -1,6 +1,6 @@
 <div class="ml-5">
     <p class="text-2xl  sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-10 uppercase">Affiliated by</p>
-    <div class="w-16 h-1 bg-red-400 mb-10"> </div>
+    <div class="w-32 h-2 bg-black mt-3 mb-10"> <div class="w-16 h-2 bg-red-400 "> </div></div>
     <div class="hero h-96" style="background-image: url(assets/banner/banner.jpg);">
         <div class="hero-overlay bg-opacity-20"></div>
         <div class="hero-content text-neutral-content">
