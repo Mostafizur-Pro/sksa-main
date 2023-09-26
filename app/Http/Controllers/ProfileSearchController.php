@@ -23,12 +23,12 @@ class ProfileSearchController extends Controller
         }
 // dd($query->from);
         $results = $query->get();
-        $allUser = User::all();
+        $usersProfile = User::all();
         
         // dd($results);
 
-        // return redirect('/allUser', ['results' => $results]);
-        return view('dashboard/search',  compact('results', 'allUser', 'searchTerm'));
+        // return redirect('/usersProfile', ['results' => $results]);
+        return view('dashboard/search',  compact('results', 'usersProfile', 'searchTerm'));
     }
     // public function search(Request $request)
     // {

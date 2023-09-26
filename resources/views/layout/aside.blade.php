@@ -32,11 +32,11 @@
         </li>
         @if($data->role == 'admin')
         <li class="mb-4">
-          <a href="{{url('/allUser')}}" class="flex items-center ">
+          <a href="{{url('/usersProfile')}}" class="flex items-center ">
             <svg class="w-5 h-5 mr-2 lg:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
             </svg>
-            <span class="hidden sm:inline">All User</span>
+            <span class="hidden sm:inline">User's Profile</span>
 
           </a>
         </li>

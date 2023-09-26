@@ -44,7 +44,7 @@ Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware('isLo
 Route::get('/edit-profile/{id}', [UserController::class, 'editProfile'])->name('editProfile')->middleware('isLoggedIn');
 
 Route::put('/update-profile/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
-Route::get('/allUser', [UserController::class, 'allUserProfile'])->name('allUser')->middleware('role');;
+Route::get('/usersProfile', [UserController::class, 'usersProfileProfile'])->name('usersProfile')->middleware('role');;
 
 Route::delete('/deleteUser/{id}', [UserController::class, 'deleteUser' ])->name('deleteUser');
 Route::delete('/deleteMainUser/{id}', [UserController::class, 'deleteMainUser' ])->name('deleteMainUser');
@@ -52,8 +52,8 @@ Route::post('/makeAdmin/{id}', [UserController::class, 'makeAdmin' ])->name('mak
 Route::post('/makeUser/{id}', [UserController::class, 'makeUser' ])->name('makeUser');
 
 
-// Route::get('/allUser', function () {
-//     return view('dashboard/allUser');
+// Route::get('/usersProfile', function () {
+//     return view('dashboard/usersProfile');
 // });
 
 

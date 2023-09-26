@@ -124,7 +124,7 @@
     </div>
     <!-- All User -->
     <footer class="btn mt-10 p-4 rounded-none bg-blue-500 hover:bg-blue-700">
-        <a href="/allUser" class="font-bold text-white">Back</a>
+        <a href="/usersProfile" class="font-bold text-white">Back</a>
     </footer>
 </div>
 

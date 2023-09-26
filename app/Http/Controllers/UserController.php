@@ -195,19 +195,19 @@ class UserController extends Controller
     // }
 
 
-    public function allUserProfile()
+    public function usersProfileProfile()
     {
-        $allUser = User::paginate(5);
-        return view('dashboard/allUser',  compact('allUser'));
+        $usersProfile = User::paginate(5);
+        return view('dashboard/usersProfile',  compact('usersProfile'));
     }
 
 
-    // public function allUserProfile()
+    // public function usersProfileProfile()
     // {
 
 
-    //     $allUser = User::all();
-    //     return view('dashboard/allUser',  compact('allUser'));
+    //     $usersProfile = User::all();
+    //     return view('dashboard/usersProfile',  compact('usersProfile'));
     // }
 
     public function deleteUser($id)
@@ -223,7 +223,7 @@ class UserController extends Controller
         // Delete the user
         $user->delete();
 
-        return redirect('/allUser')->with('success', 'Login successful!');
+        return redirect('/usersProfile')->with('success', 'Login successful!');
     }
 
     public function deleteMainUser($id)
@@ -253,7 +253,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect('/allUser')->with('success', 'User is now an admin.');
+        return redirect('/usersProfile')->with('success', 'User is now an admin.');
     }
     public function makeUser($id)
     {
@@ -264,6 +264,6 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect('/allUser')->with('success', 'User is now an admin.');
+        return redirect('/usersProfile')->with('success', 'User is now an admin.');
     }
 }
