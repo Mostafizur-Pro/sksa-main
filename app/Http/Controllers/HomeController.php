@@ -13,12 +13,20 @@ class HomeController extends Controller
     public function about(){
         return view('about');
     }
+  
     public function membership(){
         // return view('membership');
         $leadersJson = file_get_contents(storage_path('leader.json'));
         $leaders = json_decode($leadersJson, true);
 
         return view('membership', ['leaders' => $leaders]);
+    }
+
+    public function bangladesh(){
+        return view('bangladesh');
+    }
+    public function international(){
+        return view('international');
     }
     public function blackBelts(){
         return view('black-belts');

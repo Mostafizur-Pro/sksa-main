@@ -20,8 +20,8 @@
                 <div class="dropdown dropdown-hover">
                     <label tabindex="0" class=" top-0">Government Council</label>
                     <ul tabindex="0" class="dropdown-content  z-[1] menu bg-black text-white  text-xl">
-                        <li><a class="hover:text-red-600">Bangladesh</a></li>
-                        <li><a class="hover:text-red-600">International</a></li>
+                        <li><a href="/bangladesh" class="hover:text-red-600">Bangladesh</a></li>
+                        <li><a href="/international" class="hover:text-red-600">International</a></li>
                     </ul>
                 </div>
             </a>

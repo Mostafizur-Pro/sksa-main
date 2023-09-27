@@ -18,6 +18,26 @@
                 <li>
                     <a class="{{request()->routeIs('membership') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/membership">Membership</a>
                 </li>
+                <li>
+                    <a href="/bangladesh">Government Council</a>
+                    <ul>
+                        <li><a href="/bangladesh" class="{{request()->routeIs('bangladesh') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}">Bangladesh</a></li>
+                        <li><a href="/international" class="{{request()->routeIs('international') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}">International</a></li>
+                    </ul>
+                </li>
+
+                <!-- <li>
+                    <a class="ml-2 hover:text-red-600 hover:font-semibold">
+                        <div class="dropdown dropdown-hover">
+                            <label tabindex="0" class=" top-0">Government Council</label>
+                            <ul tabindex="0" class="dropdown-content  z-[1] menu bg-black text-white  text-xl">
+                                <li><a class="hover:text-red-600">Bangladesh</a></li>
+                                <li><a class="hover:text-red-600">International</a></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                </li> -->
 
                 <li>
                     <a class="{{request()->routeIs('black-belts') ? 'text-red-600 font-bold':'hover:text-red-600 hover:font-semibold'}}" href="/black-belts">Black Belts</a>
